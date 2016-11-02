@@ -93,5 +93,30 @@ namespace SimpleBlog.Core
             return db.Tags.FirstOrDefault(t => t.UrlSlug.Equals(tagSlug));
         }
 
+        public IList<Post> PostsForSearch(string search, int pageNo, int pageSize)
+        {
+            var posts = db.Posts
+                .Where(p => p.Published && (p.Title.Contains(search) || p.Category.Name.Equals(search) || p.Tags.Any(t => t.Name.Equals(search))))
+                .OrderByDescending(p => p.PostedOn)
+                .Skip(pageNo * pageSize)
+                .Take(pageSize)
+                .Include(p => p.Category)
+                .ToList();
+
+            var postIds = posts.Select(p => p.ID).ToList();
+
+            return db.Posts
+                .Where(p => postIds.Contains(p.ID))
+                .OrderByDescending(p => p.PostedOn)
+                .Include(p => p.Tags)
+                .ToList();
+        }
+
+        public int TotalPostsForSearch(string search)
+        {
+            return db.Posts.Where(p => p.Published && (p.Title.Contains(search) || p.Category.Name.Equals(search) || p.Tags.Any(t => t.Equals(search))))
+                .Count();
+        }
+
     }
 }

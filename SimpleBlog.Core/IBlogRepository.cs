@@ -20,6 +20,9 @@ namespace SimpleBlog.Core
         int TotalPostsForTag(string tagSlug);
         Tag Tag(string tagSlug);
 
+        IList<Post> PostsForSearch(string search, int pageNo, int pageSize);
+        int TotalPostsForSearch(string search);
+
 
     }
 }
