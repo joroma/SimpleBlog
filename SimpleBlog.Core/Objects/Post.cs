@@ -10,7 +10,7 @@ namespace SimpleBlog.Core.Objects
     {
         public virtual int ID { get; set; }
         public virtual string Title { get; set; }
-        public virtual string ShortDescriptio { get; set; }
+        public virtual string ShortDescription { get; set; }
         public virtual string Description { get; set; }
         public virtual string Meta { get; set; }
         public virtual string UrlSlug { get; set; }
