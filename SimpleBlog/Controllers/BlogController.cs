@@ -36,7 +36,7 @@ namespace SimpleBlog.Controllers
 
         public ViewResult Category(string category, int p = 1)
         {
-            var viewModel = new ListViewModel(_blogRepository, category, "category", p);
+            var viewModel = new ListViewModel(_blogRepository, category, "Category", p);
 
             if (viewModel.Category == null)
                 throw new HttpException(404, "Category not found");

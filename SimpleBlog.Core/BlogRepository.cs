@@ -114,7 +114,7 @@ namespace SimpleBlog.Core
 
         public int TotalPostsForSearch(string search)
         {
-            return db.Posts.Where(p => p.Published && (p.Title.Contains(search) || p.Category.Name.Equals(search) || p.Tags.Any(t => t.Equals(search))))
+            return db.Posts.Where(p => p.Published && (p.Title.Contains(search) || p.Category.Name.Equals(search) || p.Tags.Any(t => t.Name.Equals(search))))
                 .Count();
         }
 
