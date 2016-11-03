@@ -23,7 +23,7 @@
 
             @* Posted Date *@
             <div class="posted-date">
-                @Model.PostedOn.ToConfigLocalTime()
+                @Html.Raw(Model.PostedOn)
             </div>
         </div>
     </div>

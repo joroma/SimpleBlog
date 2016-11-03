@@ -152,6 +152,7 @@
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.22.19-build00125.js" />
     <Content Include="scripts\ai.0.22.19-build00125.min.js" />
+    <Content Include="scripts\app.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -161,6 +162,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityMvcActivator.cs" />
+    <Compile Include="Class1.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="DependencyContainer.cs" />
     <Compile Include="Extensions.cs" />
