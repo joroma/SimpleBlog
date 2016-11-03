@@ -118,5 +118,14 @@ namespace SimpleBlog.Core
                 .Count();
         }
 
+        public Post Post (int year, int month, string titleSlug)
+        {
+            var query = db.Posts.Where(p => p.PostedOn.Year == year && p.PostedOn.Month == month && p.UrlSlug.Equals(titleSlug))
+                .Include(p => p.Category);
+
+            return query.Single();
+
+        }
+
     }
 }
