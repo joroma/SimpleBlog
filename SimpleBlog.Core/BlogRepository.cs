@@ -127,5 +127,10 @@ namespace SimpleBlog.Core
 
         }
 
+        public IList<Category> Categories()
+        {
+            return db.Categories.OrderBy(p => p.Name).ToList();
+        }
+
     }
 }
