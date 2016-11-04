@@ -14,9 +14,6 @@ namespace SimpleBlog.Controllers
     {
         private readonly IBlogRepository _blogRepository;
         
-           
-
-
         public BlogController (IBlogRepository blogRepository )
         {
             //BlogRepository blogRepository = new BlogRepository();
@@ -78,6 +75,13 @@ namespace SimpleBlog.Controllers
                 throw new HttpException(401, "The post is not published");
 
             return View(post);
+        }
+
+        [ChildActionOnly]
+        public PartialViewResult Sidebars()
+        {
+            var widgetViewModel = new WidgetViewModel(_blogRepository);
+            return PartialView("_Sidebars", widgetViewModel);
         }
 
     }
