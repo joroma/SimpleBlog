@@ -40,6 +40,10 @@
         <div id="site_content">
             @Html.Partial("_Search")
             @RenderBody()
+
+            @* Call child action *@
+            @Html.Action("Sidebars")
+
         </div>
 
         @* Footer *@

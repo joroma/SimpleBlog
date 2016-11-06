@@ -187,6 +187,8 @@
     <Content Include="Views\Shared\_Pager.cshtml" />
     <Content Include="Views\Shared\_Search.cshtml" />
     <Content Include="Views\Post.cshtml" />
+    <Content Include="Views\Shared\_Sidebars.cshtml" />
+    <Content Include="Views\Shared\_Categories.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
