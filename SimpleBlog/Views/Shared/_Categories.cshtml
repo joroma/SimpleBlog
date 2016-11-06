@@ -7,9 +7,10 @@
     {
         <ul>
             @foreach (var category in Model)
-                <li>
+            {   <li>
                     @Html.CategoryLink(category)
                 </li>
+            }
         </ul>
     }
     else
