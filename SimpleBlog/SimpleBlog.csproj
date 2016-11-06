@@ -186,7 +186,7 @@
     <Content Include="App_Code\Helpers.cshtml" />
     <Content Include="Views\Shared\_Pager.cshtml" />
     <Content Include="Views\Shared\_Search.cshtml" />
-    <Content Include="Views\Post.cshtml" />
+    <Content Include="Views\Blog\Post.cshtml" />
     <Content Include="Views\Shared\_Sidebars.cshtml" />
     <Content Include="Views\Shared\_Categories.cshtml" />
     <Content Include="Views\Shared\_Tags.cshtml" />
