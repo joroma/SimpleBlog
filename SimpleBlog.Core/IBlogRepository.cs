@@ -27,6 +27,8 @@ namespace SimpleBlog.Core
 
         IList<Category> Categories();
 
+        IList<Tag> Tags();
+
 
     }
 }

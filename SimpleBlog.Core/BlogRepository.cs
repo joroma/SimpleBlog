@@ -132,5 +132,10 @@ namespace SimpleBlog.Core
             return db.Categories.OrderBy(p => p.Name).ToList();
         }
 
+        public IList<Tag> Tags()
+        {
+            return db.Tags.OrderBy(p => p.Name).ToList();
+        }
+
     }
 }
