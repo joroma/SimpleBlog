@@ -162,6 +162,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="App_Start\UnityMvcActivator.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\BlogController.cs" />
     <Compile Include="DependencyContainer.cs" />
     <Compile Include="Extensions.cs" />
@@ -169,6 +170,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ListViewModel.cs" />
+    <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\WidgetViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -191,6 +193,7 @@
     <Content Include="Views\Shared\_Categories.cshtml" />
     <Content Include="Views\Shared\_Tags.cshtml" />
     <Content Include="Views\Shared\_LatestPosts.cshtml" />
+    <Content Include="Views\Admin\Login.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

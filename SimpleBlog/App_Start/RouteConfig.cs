@@ -24,6 +24,11 @@ namespace SimpleBlog
                 defaults: new { controller = "Blog", action = "Tag" });
 
             routes.MapRoute(
+                "Login",
+                "Login",
+                new { controller = "Admin", action = "Login" });
+
+            routes.MapRoute(
                 name: "Post",
                 url: "Archive/{year}/{month}/{title}",
                 defaults: new { controller = "Blog", action = "Post" });
